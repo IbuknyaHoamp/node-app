@@ -1,14 +1,3 @@
-// const http = require('http')
-
-// http.createServer(function (req, res) {  
-//     res.writeHead(200, {
-//         "Content-Type" : "text/html"
-//     })
-//     res.end("hi")
-// }).listen(8000)
-
-// console.log("Server is running at port 8000")
-
 // express
 const express = require('express')
 const app = express()
@@ -38,7 +27,7 @@ app.get('/', (req, res) => {
 })
 
 // route form
-app.get('/post', (req,res) => {
+app.get('/form', (req,res) => {
     res.render('form')
 })
 
@@ -60,10 +49,3 @@ app.get('/about', (req, res) => {
 app.listen(port, () => {
     console.log(`Server us running at port ${port}`)
 })
-
-// jika ada parameter masuk ke url
-// app.get('/:name', (req,res) => {
-//     res.render('index', {
-//         name : req.params.name
-//     })
-// })
